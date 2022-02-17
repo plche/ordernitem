@@ -39,19 +39,19 @@ public class TestOrders {
         System.out.println("Imprimiendo pedido1.total: " + order1.total);
 
         // Agrega el artículo1 a la lista de artículos del pedido2 e incrementa el total del pedido
-        order2.addItem(item1);
+        order2.items.add(item1);
         order2.total += item1.price;
         System.out.println("\n----- Prueba +articulo1 a pedido2 y ++pedido2.total -----");
         order2.showVarsAndVals();
         
         // pedido3 pidió un capuchino. Agrega el capuchino a su lista de pedido y a su cuenta.
-        order3.addItem(item4);
+        order3.items.add(item4);
         order3.total += item4.price;
         System.out.println("\n----- Prueba pedido3 +capuchino y ++pedido3.total -----");
         order3.showVarsAndVals();
         
         // pedido4 agregó un latte. Actualiza en consecuencia
-        order4.addItem(item2);
+        order4.items.add(item2);
         order4.total += item2.price;
         System.out.println("\n----- Prueba pedido4 +latte y ++pedido4.total -----");
         order4.showVarsAndVals();
@@ -62,8 +62,8 @@ public class TestOrders {
         order1.showVarsAndVals();
         
         // Sam pidió más bebidas: 2 latte. Actualiza su pedido también.
-        order4.addItem(item2);
-        order4.addItem(item2);
+        order4.items.add(item2);
+        order4.items.add(item2);
         order4.total += item2.price;
         order4.total += item2.price;
         System.out.println("\n----- Prueba pedido4 +2latte y ++pedido4.total -----");

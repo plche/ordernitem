@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Order {
 
     public String name;
-    public Double total = 0.0;
+    public double total;
     public boolean ready;
     public ArrayList<Item> items = new ArrayList<Item>();
 
@@ -25,9 +25,5 @@ public class Order {
             str = "[" + str.substring(0, str.length() - 2) + "]";            
         }
         System.out.printf("Items: %s\n", str);
-    }
-
-    public void addItem(Item item) {
-        items.add(item);
     }
 }
